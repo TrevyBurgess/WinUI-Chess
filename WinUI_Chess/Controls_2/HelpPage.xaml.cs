@@ -2,8 +2,9 @@
 //
 namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
 {
+    using Microsoft.UI.Xaml;
     using System.Windows;
-    using GameAiProperties = TrevyBurgess.Games.TrevyChess.ChessGameAI.Properties;
+    using WinUI_Chess.Properties;
 
     /// <summary>
     /// Interaction logic for HelpPage.xaml
@@ -12,9 +13,9 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
     {
         public HelpPage()
         {
-            InitializeComponent();
+            //InitializeComponent();
 
-            ChessAiLogic.Source = HelperMethods.GetImageSource(GameAiProperties.Resources.ChessMoveCalculation);
+            ChessAiLogic.Source = HelperMethods.GetImageSource(Resources.ChessMoveCalculation);
         }
     }
 }

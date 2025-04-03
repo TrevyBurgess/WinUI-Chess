@@ -2,6 +2,7 @@
 //
 namespace TrevyBurgess.Games.TrevyChess.ChessGameUI.Controls
 {
+    using Microsoft.UI.Xaml.Controls;
     using System;
     using System.Collections.Generic;
     using System.Runtime.CompilerServices;
@@ -29,7 +30,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI.Controls
 
         public ChessBoardControl()
         {
-            InitializeComponent();
+            //InitializeComponent();
 
             // populate chess pieces
             _InternalChessBoard = new ChessBoard();

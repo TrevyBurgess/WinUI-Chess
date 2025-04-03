@@ -22,7 +22,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI.Controls
 
         public ChessPieceControl(ChessBoardControl theChessBoard, Action<ChessPieceControl, ChessPieceLocation, bool> moveAction, Func<ChessPieceLocation, bool> canMoveFunc)
         {
-            InitializeComponent();
+            //InitializeComponent();
 
             initialTransform = base.RenderTransform;
 
@@ -416,5 +416,10 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI.Controls
             }
         }
         #endregion
+
+        private void chessPieceImage_DragEnter(object sender, Microsoft.UI.Xaml.DragEventArgs e)
+        {
+
+        }
     }
 }

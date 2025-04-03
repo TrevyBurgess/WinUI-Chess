@@ -25,6 +25,18 @@
                MouseMove="ThePieceImage_MouseMove"
                MouseUp="ThePieceImage_MouseUp"
                MouseDown="ThePieceImage_MouseDown"
+               
+               DragEnter="chessPieceImage_DragEnter"
+               DragLeave="chessPieceImage_DragLeave"
+               PointerMoved="chessPieceImage_PointerMoved"
+               
+               
+               
+               
+               
+               
+               
+               
         />
     </Grid>
 </UserControl>

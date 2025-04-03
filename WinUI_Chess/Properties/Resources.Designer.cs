@@ -61,6 +61,66 @@ namespace WinUI_Chess.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] B_Bishop {
+            get {
+                object obj = ResourceManager.GetObject("B_Bishop", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] B_King {
+            get {
+                object obj = ResourceManager.GetObject("B_King", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] B_Knight {
+            get {
+                object obj = ResourceManager.GetObject("B_Knight", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] B_Pawn {
+            get {
+                object obj = ResourceManager.GetObject("B_Pawn", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] B_Queen {
+            get {
+                object obj = ResourceManager.GetObject("B_Queen", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] B_Rook {
+            get {
+                object obj = ResourceManager.GetObject("B_Rook", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trevy Chess is Super Cool.
         /// </summary>
         public static string Help_DialogBoxMessage {
@@ -340,11 +400,41 @@ namespace WinUI_Chess.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Piece {
+            get {
+                object obj = ResourceManager.GetObject("Piece", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Redo.
         /// </summary>
         public static string RedoMove_Name {
             get {
                 return ResourceManager.GetString("RedoMove_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Square1 {
+            get {
+                object obj = ResourceManager.GetObject("Square1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Square2 {
+            get {
+                object obj = ResourceManager.GetObject("Square2", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -556,6 +646,16 @@ namespace WinUI_Chess.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] TrevyChess {
+            get {
+                object obj = ResourceManager.GetObject("TrevyChess", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trevy Chess.
         /// </summary>
         public static string TrevyChessTitle {
@@ -579,6 +679,66 @@ namespace WinUI_Chess.Properties {
         public static string UpdateChessBoard {
             get {
                 return ResourceManager.GetString("UpdateChessBoard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] W_Bishop {
+            get {
+                object obj = ResourceManager.GetObject("W_Bishop", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] W_King {
+            get {
+                object obj = ResourceManager.GetObject("W_King", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] W_Knight {
+            get {
+                object obj = ResourceManager.GetObject("W_Knight", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] W_Pawn {
+            get {
+                object obj = ResourceManager.GetObject("W_Pawn", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] W_Queen {
+            get {
+                object obj = ResourceManager.GetObject("W_Queen", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] W_Rook {
+            get {
+                object obj = ResourceManager.GetObject("W_Rook", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

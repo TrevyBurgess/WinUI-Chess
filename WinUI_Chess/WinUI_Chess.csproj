@@ -12,6 +12,12 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Page Remove="Controls_2\ChessBoardControl.xaml" />
+    <Page Remove="Controls_2\ChessPieceControl.xaml" />
+    <Page Remove="Controls_2\HelpPage.xaml" />
+    <Page Remove="Controls_2\PawnPromotionChooser.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -55,6 +61,20 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Controls_2\ChessBoardControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Controls_2\ChessPieceControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Controls_2\HelpPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Controls_2\PawnPromotionChooser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 
   <!--
