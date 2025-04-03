@@ -1,0 +1,16 @@
+﻿<Window x:Class="TrevyBurgess.Games.TrevyChess.ChessGameUI.HelpPage"
+        xmlns:ChessControls="clr-namespace:TrevyBurgess.Games.TrevyChess.ChessGameUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HelpPage" Height="406" Width="809" Icon="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/TrevyChess.ico">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="6*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Game Logic for Chess AI" FontSize="22" TextAlignment="Center" />
+        <ScrollViewer Grid.Row="1" >
+            <Image Name="ChessAiLogic" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Piece.gif" />
+        </ScrollViewer>
+    </Grid>
+</Window>

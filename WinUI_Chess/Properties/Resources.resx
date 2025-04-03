@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Help_DialogBoxMessage" xml:space="preserve">
+    <value>Trevy Chess is Super Cool</value>
+  </data>
+  <data name="Menu_Chess" xml:space="preserve">
+    <value>Chess</value>
+  </data>
+  <data name="Menu_Chess_ComputerColor" xml:space="preserve">
+    <value>Computer's Color:</value>
+  </data>
+  <data name="Menu_Chess_ComputerColor_Black" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="Menu_Chess_ComputerColor_White" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="Menu_Chess_Difficulty" xml:space="preserve">
+    <value>Challenge Level:</value>
+  </data>
+  <data name="Menu_Chess_Difficulty_1" xml:space="preserve">
+    <value>Easy</value>
+  </data>
+  <data name="Menu_Chess_Difficulty_2" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Menu_Chess_Difficulty_3" xml:space="preserve">
+    <value>Hard</value>
+  </data>
+  <data name="Menu_Chess_Difficulty_4" xml:space="preserve">
+    <value>Expert</value>
+  </data>
+  <data name="Menu_Chess_Difficulty_5" xml:space="preserve">
+    <value>Grand Master</value>
+  </data>
+  <data name="Menu_Chess_PlayAgainstComputer" xml:space="preserve">
+    <value>Play Against Computer</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Menu_File_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Menu_File_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Menu_File_Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Menu_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Menu_Help_About" xml:space="preserve">
+    <value>About...</value>
+  </data>
+  <data name="Menu_Help_HelpTopics" xml:space="preserve">
+    <value>Help Tpoics</value>
+  </data>
+  <data name="Menu_HomeTab_GameGroup_Name" xml:space="preserve">
+    <value>Game</value>
+  </data>
+  <data name="Menu_HomeTab_Name" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Menu_Tools" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="Menu_Tools_PlayWithoutRules" xml:space="preserve">
+    <value>Play without Rules</value>
+  </data>
+  <data name="Menu_Tools_ShowChessCodes" xml:space="preserve">
+    <value>Show Chess Codes</value>
+  </data>
+  <data name="Menu_View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Menu_View_AiComments" xml:space="preserve">
+    <value>Show AI Comments</value>
+  </data>
+  <data name="Menu_View_RotateBoard" xml:space="preserve">
+    <value>Rotate Board</value>
+  </data>
+  <data name="Menu_View_StatusBar" xml:space="preserve">
+    <value>Status Bar</value>
+  </data>
+  <data name="Menu_View_ToolBar" xml:space="preserve">
+    <value>Tool Bar</value>
+  </data>
+  <data name="NoMessage" xml:space="preserve">
+    <value>Ready</value>
+    <comment>Used when there's no messages to display</comment>
+  </data>
+  <data name="PawnPromotion_Instructions" xml:space="preserve">
+    <value>Select piece to replace pawn</value>
+  </data>
+  <data name="RedoMove_Name" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="Status_CheckMate" xml:space="preserve">
+    <value>Player check mated</value>
+  </data>
+  <data name="Status_IsADraw" xml:space="preserve">
+    <value>Game is a draw</value>
+  </data>
+  <data name="Status_IsCheck" xml:space="preserve">
+    <value>King is in check</value>
+  </data>
+  <data name="Status_PlayersColor_Black" xml:space="preserve">
+    <value>Player's Color: Black</value>
+  </data>
+  <data name="Status_PlayersColor_White" xml:space="preserve">
+    <value>Player's Color: White</value>
+  </data>
+  <data name="Status_PlayersTurn_Black" xml:space="preserve">
+    <value>Player's Turn: Black</value>
+  </data>
+  <data name="Status_PlayersTurn_White" xml:space="preserve">
+    <value>Player's Turn: White</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="Toolbar_Difficulty" xml:space="preserve">
+    <value>Challenge Level:</value>
+  </data>
+  <data name="Toolbar_Difficulty_1" xml:space="preserve">
+    <value>Challenge Level: Easy</value>
+  </data>
+  <data name="Toolbar_Difficulty_1_Color" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="Toolbar_Difficulty_2" xml:space="preserve">
+    <value>Challenge Level: Medium</value>
+  </data>
+  <data name="Toolbar_Difficulty_2_Color" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="Toolbar_Difficulty_3" xml:space="preserve">
+    <value>Challenge Level: Hard</value>
+  </data>
+  <data name="Toolbar_Difficulty_3_Color" xml:space="preserve">
+    <value>GreenYellow</value>
+  </data>
+  <data name="Toolbar_Difficulty_4" xml:space="preserve">
+    <value>Challenge Level: Expert</value>
+  </data>
+  <data name="Toolbar_Difficulty_4_Color" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="Toolbar_Difficulty_5" xml:space="preserve">
+    <value>Challenge Level: Grand Master</value>
+  </data>
+  <data name="Toolbar_Difficulty_5_Color" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="Toolbar_PlayAgainstComputer" xml:space="preserve">
+    <value>Play Against Computer</value>
+  </data>
+  <data name="Toolbar_PlayAgainstPlayer" xml:space="preserve">
+    <value>Play Against Player</value>
+  </data>
+  <data name="Toolbar_RotateBoard" xml:space="preserve">
+    <value>Rotate Board</value>
+  </data>
+  <data name="Toolbar_UserColor" xml:space="preserve">
+    <value>User Color</value>
+  </data>
+  <data name="TrevyChessTitle" xml:space="preserve">
+    <value>Trevy Chess</value>
+  </data>
+  <data name="UndoMove_Name" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="UpdateChessBoard" xml:space="preserve">
+    <value>Update</value>
+  </data>
+</root>
