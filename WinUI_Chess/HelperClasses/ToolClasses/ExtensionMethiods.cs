@@ -3,7 +3,6 @@
 namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
 {
     using System;
-    using System.Windows.Media;
 
     /// <summary>
     /// Decorators

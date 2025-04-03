@@ -2,18 +2,13 @@
 // 
 namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
 {
+    using Microsoft.UI.Xaml.Data;
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows.Data;
-    using TrevyBurgess.Games.TrevyChess.ChessBoardLogic;
     using TrevyBurgess.Games.TrevyChess.ChessGameAI;
 
     public class DifficultyConverter : IValueConverter
     {
-        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        public object Convert(object value, Type targetType, object parameter, string language)
         {
             switch ((ChallengeLevel)value)
             {
@@ -32,7 +27,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
             }
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
             int challengeLevel = (int)value;
             switch ((int)value)

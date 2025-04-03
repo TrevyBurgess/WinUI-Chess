@@ -2,18 +2,18 @@
 //
 namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
 {
+    using Microsoft.UI.Xaml.Media;
+    using Microsoft.UI.Xaml.Media.Imaging;
     using System;
     using System.Diagnostics.Contracts;
     using System.IO;
-    using System.Windows.Media;
-    using System.Windows.Media.Imaging;
 
     public static class HelperMethods
     {
         /// <summary>
         /// Convert a Bitmat into an ImageSource
         /// </summary>
-        public static ImageSource GetImageSource(System.Drawing.Bitmap theImage)
+        public static ImageSource GetImageSource(Bitmap theImage)
         {
             Contract.Requires<ArgumentNullException>(theImage != null);
 

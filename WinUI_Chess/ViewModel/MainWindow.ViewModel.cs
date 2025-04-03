@@ -26,8 +26,8 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
                 ChessCodes = e.ChessCode;
             };
 
-            StatusMessages = WinUI_Chess.Properties.Resources.Status_PlayersTurn_White;
-            AiComments = Properties.Resources.NoMessage;
+            StatusMessages = WinUI_Chess.Resources.Status_PlayersTurn_White;
+            AiComments = Resources.NoMessage;
             ComputerColor = ChessPieceColor.Black;
 
             chessBoardControl.PlayAgainstComputer = PlayAgainstComputer;
@@ -60,8 +60,8 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
                         () =>
                         {
                             chessBoardControl.NewGame();
-                            StatusMessages = Properties.Resources.Status_PlayersTurn_White;
-                            AiComments = Properties.Resources.NoMessage;
+                            StatusMessages = Resources.Status_PlayersTurn_White;
+                            AiComments = Resources.NoMessage;
                             ChessCodes = chessBoardControl.BoardState;
 
                             UndoMoveCommand.RaiseCanExecuteChanged();
@@ -106,14 +106,14 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
         {
             get
             {
-                return Properties.Settings.Default.ToolbarVisible;
+                return Settings.Default.ToolbarVisible;
             }
             set
             {
-                if (Properties.Settings.Default.ToolbarVisible != value)
+                if (Settings.Default.ToolbarVisible != value)
                 {
-                    Properties.Settings.Default.ToolbarVisible = value;
-                    Properties.Settings.Default.Save();
+                    Settings.Default.ToolbarVisible = value;
+                    Settings.Default.Save();
                     RaisePropertyChanged("ViewToolBar");
                 }
             }
@@ -126,14 +126,14 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
         {
             get
             {
-                return Properties.Settings.Default.StatusBarVisible;
+                return Settings.Default.StatusBarVisible;
             }
             set
             {
-                if (Properties.Settings.Default.StatusBarVisible != value)
+                if (Settings.Default.StatusBarVisible != value)
                 {
-                    Properties.Settings.Default.StatusBarVisible = value;
-                    Properties.Settings.Default.Save();
+                    Settings.Default.StatusBarVisible = value;
+                    Settings.Default.Save();
                     RaisePropertyChanged("ViewStatus");
 
                     RaisePropertyChanged("DisplayCommand_ShowAiComments");
@@ -179,14 +179,14 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
         {
             get
             {
-                return Properties.Settings.Default.ShowAiComments;
+                return Settings.Default.ShowAiComments;
             }
             set
             {
-                if (Properties.Settings.Default.ShowAiComments != value)
+                if (Settings.Default.ShowAiComments != value)
                 {
-                    Properties.Settings.Default.ShowAiComments = value;
-                    Properties.Settings.Default.Save();
+                    Settings.Default.ShowAiComments = value;
+                    Settings.Default.Save();
 
                     RaisePropertyChanged("ShowAiComments");
                     RaisePropertyChanged("DisplayCommandShowAiComments");
@@ -317,16 +317,16 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
         {
             get
             {
-                return Properties.Settings.Default.PlayAgainstComputer;
+                return Settings.Default.PlayAgainstComputer;
             }
             set
             {
-                if (Properties.Settings.Default.PlayAgainstComputer != value)
+                if (Settings.Default.PlayAgainstComputer != value)
                 {
                     chessBoardControl.PlayAgainstComputer = value;
 
-                    Properties.Settings.Default.PlayAgainstComputer = value;
-                    Properties.Settings.Default.Save();
+                    Settings.Default.PlayAgainstComputer = value;
+                    Settings.Default.Save();
 
                     RaisePropertyChanged("PlayAgainstComputer");
                     RaisePropertyChanged("DisplayCommand_ShowAiComments");
@@ -341,16 +341,16 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
         {
             get
             {
-                return Properties.Settings.Default.Difficulty;
+                return Settings.Default.Difficulty;
             }
             set
             {
-                if (Properties.Settings.Default.Difficulty != value)
+                if (Settings.Default.Difficulty != value)
                 {
                     chessBoardControl.DifficultyLevel = value;
 
-                    Properties.Settings.Default.Difficulty = value;
-                    Properties.Settings.Default.Save();
+                    Settings.Default.Difficulty = value;
+                    Settings.Default.Save();
 
                     RaisePropertyChanged("DifficultyLevel");
                 }
@@ -393,14 +393,14 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
         {
             get
             {
-                return Properties.Settings.Default.ShowChessCodes;
+                return Settings.Default.ShowChessCodes;
             }
             set
             {
-                if (Properties.Settings.Default.ShowChessCodes != value)
+                if (Settings.Default.ShowChessCodes != value)
                 {
-                    Properties.Settings.Default.ShowChessCodes = value;
-                    Properties.Settings.Default.Save();
+                    Settings.Default.ShowChessCodes = value;
+                    Settings.Default.Save();
 
                     RaisePropertyChanged("ShowChessCodes");
                 }
@@ -465,14 +465,14 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
         {
             get
             {
-                return Properties.Settings.Default.PlayWithoutRules;
+                return Settings.Default.PlayWithoutRules;
             }
             set
             {
-                if (Properties.Settings.Default.PlayWithoutRules != value)
+                if (Settings.Default.PlayWithoutRules != value)
                 {
-                    Properties.Settings.Default.PlayWithoutRules = value;
-                    Properties.Settings.Default.Save();
+                    Settings.Default.PlayWithoutRules = value;
+                    Settings.Default.Save();
                 }
             }
         }

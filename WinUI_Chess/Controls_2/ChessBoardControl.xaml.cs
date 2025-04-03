@@ -5,12 +5,8 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI.Controls
     using Microsoft.UI.Xaml.Controls;
     using System;
     using System.Collections.Generic;
-    using System.Runtime.CompilerServices;
     using System.Threading;
     using System.Threading.Tasks;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Media;
     using TrevyBurgess.Games.TrevyChess.ChessBoardLogic;
     using TrevyBurgess.Games.TrevyChess.ChessGameAI;
     using TrevyBurgess.Games.TrevyChess.ChessGameUI.HelperClasses.Interfaces;

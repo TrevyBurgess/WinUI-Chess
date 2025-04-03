@@ -2,17 +2,13 @@
 // 
 namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
 {
+    using Microsoft.UI.Xaml.Data;
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows.Data;
     using TrevyBurgess.Games.TrevyChess.ChessBoardLogic;
 
     public class PlayerColorConverter : IValueConverter
     {
-        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        public object Convert(object value, Type targetType, object parameter, string language)
         {
             ChessPieceColor pieceColor = (ChessPieceColor)value;
 
@@ -24,7 +20,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
                 throw new NotSupportedException("Only ChessPieceColor.Black and ChessPieceColor.White is meaningful.");
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
             int colorIndex = (int)value;
             if (colorIndex == 0)

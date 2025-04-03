@@ -121,11 +121,41 @@ namespace WinUI_Chess.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Cose_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Cose_16x16", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Help_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Help_16x16", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trevy Chess is Super Cool.
         /// </summary>
         public static string Help_DialogBoxMessage {
             get {
                 return ResourceManager.GetString("Help_DialogBoxMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] mcol_blue_robot {
+            get {
+                object obj = ResourceManager.GetObject("mcol_blue_robot", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -382,6 +412,16 @@ namespace WinUI_Chess.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] NewGame {
+            get {
+                object obj = ResourceManager.GetObject("NewGame", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ready.
         /// </summary>
         public static string NoMessage {
@@ -410,11 +450,71 @@ namespace WinUI_Chess.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] PlayAgainstComputer {
+            get {
+                object obj = ResourceManager.GetObject("PlayAgainstComputer", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] PlayAgainstComputer___Copy {
+            get {
+                object obj = ResourceManager.GetObject("PlayAgainstComputer - Copy", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Printer_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Printer_16x16", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Printer_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("Printer_48x48", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Redo.
         /// </summary>
         public static string RedoMove_Name {
             get {
                 return ResourceManager.GetString("RedoMove_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] RedoMoveImage {
+            get {
+                object obj = ResourceManager.GetObject("RedoMoveImage", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] RotateBoard {
+            get {
+                object obj = ResourceManager.GetObject("RotateBoard", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -648,6 +748,16 @@ namespace WinUI_Chess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        public static byte[] Toolbars {
+            get {
+                object obj = ResourceManager.GetObject("Toolbars", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         public static byte[] TrevyChess {
             get {
                 object obj = ResourceManager.GetObject("TrevyChess", resourceCulture);
@@ -670,6 +780,16 @@ namespace WinUI_Chess.Properties {
         public static string UndoMove_Name {
             get {
                 return ResourceManager.GetString("UndoMove_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] UndoMoveImage {
+            get {
+                object obj = ResourceManager.GetObject("UndoMoveImage", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
