@@ -2,9 +2,8 @@
 // Schiller, Eric (2003), Official Rules of Chess (2nd ed.), Cardoza, ISBN 978-1-58042-092-1
 namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
 {
+    using Microsoft.UI.Xaml;
     using Microsoft.UI.Xaml.Media;
-    using System.Windows;
-    using System.Windows.Media;
     using TrevyBurgess.Games.TrevyChess.ChessBoardLogic;
 
     /// <summary>

@@ -3,7 +3,6 @@
 namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
 {
     using Microsoft.UI.Xaml;
-    using System.Windows;
     using WinUI_Chess.Properties;
 
     /// <summary>

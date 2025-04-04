@@ -2,14 +2,9 @@
 //
 namespace TrevyBurgess.Games.TrevyChess.ChessGameUI.Controls
 {
+    using Microsoft.UI.Xaml.Controls;
     using System;
-    using System.Threading.Tasks;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Input;
-    using System.Windows.Media;
     using TrevyBurgess.Games.TrevyChess.ChessBoardLogic;
-    using TrevyBurgess.Games.TrevyChess.ChessGameUI.HelperClasses.Interfaces;
 
     /// <summary>
     /// The chess piece knows where it is on the board

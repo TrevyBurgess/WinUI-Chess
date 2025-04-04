@@ -47,7 +47,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
             undoList = new ChessMoveUndoRedoList(boardLayout);
 
             // Set board state
-            this.BoardState = boardLayout;
+            BoardState = boardLayout;
         }
 
         public ChessBoard(ChessBoard board)
@@ -59,7 +59,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
             undoList = new ChessMoveUndoRedoList(board.BoardState);
 
             // Set board state
-            this.BoardState = board.BoardState;
+            BoardState = board.BoardState;
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
             undoList = new ChessMoveUndoRedoList(_NewGameBoardState);
 
             // Setup the board
-            this.BoardState = _NewGameBoardState;
+            BoardState = _NewGameBoardState;
         }
         #endregion
 
@@ -110,7 +110,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
                     }
                 }
 
-                enPassantColumn = this.undoList.GetEnPassantColumn();
+                enPassantColumn = undoList.GetEnPassantColumn();
             }
         }
 
@@ -207,7 +207,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
 
                 enPassantColumn = moveResult.EnPassantColumn;
 
-                undoList.AddMoveToUndoList(this.BoardState, computerMove);
+                undoList.AddMoveToUndoList(BoardState, computerMove);
 
                 return moveResult;
             }
@@ -244,24 +244,17 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
                     {
                         #region Test if move puts own piece in check
                         // Store current state
-                        string currentBoard = this.BoardState;
+                        string currentBoard = BoardState;
                         ChessPieceColor currentPlayer = CurrentPlayerColor;
 
                         // Test move
                         piece.Move(newPosition, true);
-                        bool isInCheck = this.IsKingInCheck(currentPlayer);
+                        bool isInCheck = IsKingInCheck(currentPlayer);
 
                         // Restore board
-                        this.BoardState = currentBoard;
+                        BoardState = currentBoard;
 
-                        if (isInCheck)
-                        {
-                            return false;
-                        }
-                        else
-                        {
-                            return true;
-                        }
+                        return !isInCheck;
                         #endregion
                     }
                     else
@@ -473,7 +466,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
 
                     // Get rid of move where pawn is in end of board
                     undoList.GetPreviousMove();
-                    undoList.AddMoveToUndoList(this.BoardState, computerMove);
+                    undoList.AddMoveToUndoList(BoardState, computerMove);
                     return;
                 }
             }
@@ -513,7 +506,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
         /// </summary>
         public void UndoMove()
         {
-            this.BoardState = undoList.GetPreviousMove();
+            BoardState = undoList.GetPreviousMove();
         }
 
         /// <summary>
@@ -529,7 +522,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
         /// </summary>
         public void RedoMove()
         {
-            this.BoardState = undoList.GetNextMove();
+            BoardState = undoList.GetNextMove();
         }
         #endregion
 

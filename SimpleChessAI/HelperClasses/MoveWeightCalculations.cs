@@ -2,10 +2,7 @@
 // 
 namespace TrevyBurgess.Games.TrevyChess.ChessGameAI
 {
-    using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
     using TrevyBurgess.Games.TrevyChess.ChessBoardLogic;
 
     /// <summary>
