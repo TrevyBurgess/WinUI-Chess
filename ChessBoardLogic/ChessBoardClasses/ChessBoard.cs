@@ -14,11 +14,9 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
     public class ChessBoard
     {
         /// <summary>
-        /// New game board state
+        /// One side has 16 black, the other side has 16 white.
         /// </summary>
-        public string NewGameBoardState { get { return _NewGameBoardState; } }
-        private const string _NewGameBoardState = "W_RA1_NB1_BC1_QD1_KE1_BF1_NG1_RH1_PA2_PB2_PC2_PD2_PE2_PF2_PG2_PH2_pA7_pB7_pC7_pD7_pE7_pF7_pG7_pH7_rA8_nB8_bC8_qD8_kE8_bF8_nG8_rH8_0U";
-        private const int pieceCount = 16; // One side has 16 black, the other side has 16 white.
+        private const int pieceCount = 16;
 
         /// <summary>
         /// Length of string used to encode the state of the chess board.
@@ -33,6 +31,11 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
         {
             ResetBoard();
         }
+
+        /// <summary>
+        /// New game board state
+        /// </summary>
+        public static string NewGameBoardState => "W_RA1_NB1_BC1_QD1_KE1_BF1_NG1_RH1_PA2_PB2_PC2_PD2_PE2_PF2_PG2_PH2_pA7_pB7_pC7_pD7_pE7_pF7_pG7_pH7_rA8_nB8_bC8_qD8_kE8_bF8_nG8_rH8_0U";
 
         /// <summary>
         /// Create the board
@@ -67,13 +70,13 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
         /// </summary>
         public void ResetBoard()
         {
-            Contract.Assume(_NewGameBoardState.Length == C_BoardStateStringLength);
+            Contract.Assume(NewGameBoardState.Length == C_BoardStateStringLength);
 
             // Reset Undo list
-            undoList = new ChessMoveUndoRedoList(_NewGameBoardState);
+            undoList = new ChessMoveUndoRedoList(NewGameBoardState);
 
             // Setup the board
-            BoardState = _NewGameBoardState;
+            BoardState = NewGameBoardState;
         }
         #endregion
 
@@ -165,7 +168,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
         public IEnumerable<ChessMove> PossibleChessMoves(ChessPieceColor sideToCheck)
         {
             // Get list of live pieces current player has
-            List<ChessPiece> currentPlayerPieces = new List<ChessPiece>(pieceCount);
+            List<ChessPiece> currentPlayerPieces = new(pieceCount);
             foreach (ChessPiece chessPiece in allChessPieces)
             {
                 if (chessPiece.PieceColor == sideToCheck && !chessPiece.IsCaptured)
