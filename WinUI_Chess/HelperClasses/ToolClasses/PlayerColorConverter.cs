@@ -1,10 +1,10 @@
 ﻿// 
 // 
-namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
+namespace CyberFeedForward.WinUI_Chess.HelperClasses.ToolClasses
 {
+    using CyberFeedForward.ChessBoardLogic.ChessPiece;
     using Microsoft.UI.Xaml.Data;
     using System;
-    using TrevyBurgess.Games.TrevyChess.ChessBoardLogic;
 
     public class PlayerColorConverter : IValueConverter
     {

@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TrevyBurgess.Games.TrevyChess.ChessBoardLogic;
-
-namespace TrevyBurgess.Games.TrevyChess.ChessGameUI.HelperClasses.Interfaces
+﻿//
+//
+namespace CyberFeedForward.WinUI_Chess.HelperClasses.InterfacesClasses
 {
+    using CyberFeedForward.ChessBoardLogic.ChessPiece;
+    using CyberFeedForward.WinUI_Chess.HelperClasses.ChessClasses;
+
     public interface IChessBoardControl
     {
         /// <summary>

@@ -1,67 +1,69 @@
 ﻿//
 //
-namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic.Internal
+namespace CyberFeedForward.ChessBoardLogic.ChessPiece.Internals;
+
+using CyberFeedForward.ChessBoardLogic.ChessBoardClasses;
+using CyberFeedForward.ChessBoardLogic.ChessMoveClasses;
+using CyberFeedForward.ChessBoardLogic.ChessPiece;
+using System.Collections.Generic;
+
+/// <summary>
+/// Encapsulate Rook behavior
+/// </summary>
+internal class Rook : ChessPiece
 {
-    using System.Collections.Generic;
+    internal Rook(ChessBoard board, ChessPieceColor Color, ChessPieceLocation position, bool initialPosition, short id) :
+        base(board, Color, ChessPieceType.Rook, position, initialPosition, id) { }
+
+    #region Public API
+    public override int Weight { get { return 500; } }
 
     /// <summary>
-    /// Encapsulate Rook behavior
+    /// Return if a specified move is legal for a Rook
     /// </summary>
-    internal class Rook : ChessPiece
+    public override bool CanMove(ChessPieceLocation newPosition)
     {
-        internal Rook(ChessBoard board, ChessPieceColor Color, ChessPieceLocation position, bool initialPosition, short id) :
-            base(board, Color, ChessPieceType.Rook, position, initialPosition, id) { }
+        return CanMoveHorVert(newPosition);
+    }
 
-        #region Public API
-        public override int Weight { get { return 500; } }
+    /// <summary>
+    /// Return if a specified move is legal for a Rook
+    /// </summary>
+    internal override bool CanCover(ChessPieceLocation newPosition)
+    {
+        return CanCoverHorVert(newPosition);
+    }
 
-        /// <summary>
-        /// Return if a specified move is legal for a Rook
-        /// </summary>
-        public override bool CanMove(ChessPieceLocation newPosition)
+    /// <summary>
+    /// Return if piece can move from current location
+    /// </summary>
+    public override bool CanMove()
+    {
+        return CanMoveHorVert();
+    }
+
+    /// <summary>
+    /// Return list of all possible moves piece can make on chess board
+    /// </summary>
+    public override IEnumerable<ChessMove> PossibleMoveList()
+    {
+        foreach (ChessMove move in MoveHorVertList())
         {
-            return base.CanMoveHorVert(newPosition);
+            yield return move;
         }
+    }
+    #endregion
 
-        /// <summary>
-        /// Return if a specified move is legal for a Rook
-        /// </summary>
-        internal override bool CanCover(ChessPieceLocation newPosition)
+    /// <summary>
+    /// Do housekeeping after piece is moved. Return move weight
+    /// </summary>
+    internal override ChessMoveResults DoMoveHousekeeping(ChessPieceLocation oldPosition, ChessPieceLocation newPosition)
+    {
+        InitialPosition = false;
+
+        return new ChessMoveResults
         {
-            return base.CanCoverHorVert(newPosition);
-        }
-
-        /// <summary>
-        /// Return if piece can move from current location
-        /// </summary>
-        public override bool CanMove()
-        {
-            return base.CanMoveHorVert();
-        }
-
-        /// <summary>
-        /// Return list of all possible moves piece can make on chess board
-        /// </summary>
-        public override IEnumerable<ChessMove> PossibleMoveList()
-        {
-            foreach (ChessMove move in base.MoveHorVertList())
-            {
-                yield return move;
-            }
-        }
-        #endregion
-
-        /// <summary>
-        /// Do housekeeping after piece is moved. Return move weight
-        /// </summary>
-        internal override ChessMoveResults DoMoveHousekeeping(ChessPieceLocation oldPosition, ChessPieceLocation newPosition)
-        {
-            base.InitialPosition = false;
-
-            ChessMoveResults result = new ChessMoveResults();
-            result.Result = MoveMessage.MoveSucceeded;
-
-            return result;
-        }
+            Result = MoveMessage.MoveSucceeded
+        };
     }
 }

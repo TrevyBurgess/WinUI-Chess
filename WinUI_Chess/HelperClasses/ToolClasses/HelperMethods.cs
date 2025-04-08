@@ -1,6 +1,6 @@
 ﻿//
 //
-namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
+namespace CyberFeedForward.WinUI_Chess.HelperClasses.ToolClasses
 {
     using Microsoft.UI.Xaml.Media;
     using Microsoft.UI.Xaml.Media.Imaging;
@@ -33,7 +33,7 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
         /// <summary>
         /// Convert a Bitmat into an ImageSource
         /// </summary>
-        public static ImageSource GetImageSource(System.Drawing.Icon theImage)
+        public static ImageSource GetImageSource(Icon theImage)
         {
             Contract.Requires<ArgumentNullException>(theImage != null);
 
@@ -43,23 +43,23 @@ namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
         /// <summary>
         /// Convert a Bitmat into an ImageSource
         /// </summary>
-        public static System.Windows.Controls.Image GetImage(System.Drawing.Bitmap theImage, double size)
+        public static Image GetImage(Bitmap theImage, double size)
         {
             Contract.Requires<ArgumentNullException>(theImage != null);
             Contract.Requires<ArgumentException>(size > 0);
 
-            return new System.Windows.Controls.Image { Source = GetImageSource(theImage), Width = size, Height = size };
+            return new Image { Source = GetImageSource(theImage), Width = size, Height = size };
         }
 
         /// <summary>
         /// Convert a Bitmat into an ImageSource
         /// </summary>
-        public static System.Windows.Controls.Image GetImage(System.Drawing.Icon theImage, double size)
+        public static Image GetImage(Icon theImage, double size)
         {
             Contract.Requires<ArgumentNullException>(theImage != null);
             Contract.Requires<ArgumentException>(size > 0);
 
-            return new System.Windows.Controls.Image { Source = GetImageSource(theImage), Width = size, Height = size };
+            return new Image { Source = GetImageSource(theImage), Width = size, Height = size };
         }
     }
 }

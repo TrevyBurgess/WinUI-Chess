@@ -1,6 +1,6 @@
 ﻿//
 //
-namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
+namespace CyberFeedForward.WinUI_Chess.HelperClasses.ToolClasses
 {
     using System;
 

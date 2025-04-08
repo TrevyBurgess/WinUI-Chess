@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//
+//
+namespace CyberFeedForward.SimpleChessAI.HelperClasses;
 
-namespace TrevyBurgess.Games.TrevyChess.ChessGameAI
+public enum ChallengeLevel
 {
-    public enum ChallengeLevel
-    {
-        Easy = 1,
-        Medium = 2,
-        Hard = 3,
-        Expert = 4,
-        GrandMaster = 5
-    }
+    Easy = 1,
+    Medium = 2,
+    Hard = 3,
+    Expert = 4,
+    GrandMaster = 5
 }

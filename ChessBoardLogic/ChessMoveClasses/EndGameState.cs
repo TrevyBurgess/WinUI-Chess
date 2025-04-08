@@ -1,32 +1,26 @@
 ﻿//
 //
-namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
+namespace CyberFeedForward.ChessBoardLogic.ChessMoveClasses;
+
+public enum EndGameState
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
+    /// <summary>
+    /// If game is continuing
+    /// </summary>
+    GameHasNotEnded,
 
-    public enum EndGameState
-    {
-        /// <summary>
-        /// If game is continuing
-        /// </summary>
-        GameHasNotEnded,
+    /// <summary>
+    /// Either black or white king is in check
+    /// </summary>
+    IsCheck,
 
-        /// <summary>
-        /// Either black or white king is in check
-        /// </summary>
-        IsCheck,
+    /// <summary>
+    /// Only kings remain on field
+    /// </summary>
+    IsADraw,
 
-        /// <summary>
-        /// Only kings remain on field
-        /// </summary>
-        IsADraw,
-
-        /// <summary>
-        /// A king is checkmated
-        /// </summary>
-        CheckMate
-    }
+    /// <summary>
+    /// A king is checkmated
+    /// </summary>
+    CheckMate
 }

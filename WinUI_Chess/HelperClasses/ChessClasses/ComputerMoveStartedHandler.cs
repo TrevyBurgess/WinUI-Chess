@@ -1,6 +1,5 @@
 ﻿//
 //
-namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
-{
-    public delegate void ComputerMoveStartedHandler();
-}
+namespace CyberFeedForward.WinUI_Chess.HelperClasses.ChessClasses;
+
+public delegate void ComputerMoveStartedHandler();

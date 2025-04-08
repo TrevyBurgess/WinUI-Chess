@@ -1,0 +1,148 @@
+﻿<UserControl
+        x:Class="CyberFeedForward.WinUI_Chess.Controls.ChessBoardControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d" 
+        Width="600"
+        Height="600"
+        Loaded="TheChessBoard_Loaded"
+    >
+    <Grid Background="Wheat"
+          Name="chessBoardControl"
+          >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Chess squares -->
+        <TextBlock Name="TopCol1" Grid.Column="1" Grid.Row="0" Text=" A " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="TopCol2" Grid.Column="2" Grid.Row="0" Text=" B " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="TopCol3" Grid.Column="3" Grid.Row="0" Text=" C " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="TopCol4" Grid.Column="4" Grid.Row="0" Text=" D " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="TopCol5" Grid.Column="5" Grid.Row="0" Text=" E " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="TopCol6" Grid.Column="6" Grid.Row="0" Text=" F " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="TopCol7" Grid.Column="7" Grid.Row="0" Text=" G " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="TopCol8" Grid.Column="8" Grid.Row="0" Text=" H " HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <TextBlock Name="LeftRow8" Grid.Column="0" Grid.Row="1" Text=" 8 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Image Grid.Column="1" Grid.Row="1"  Stretch="Fill" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" />
+        <Image Grid.Column="2" Grid.Row="1" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="3" Grid.Row="1" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="4" Grid.Row="1" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="5" Grid.Row="1" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="6" Grid.Row="1" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="7" Grid.Row="1" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="8" Grid.Row="1" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <TextBlock Name="RightRow8" Grid.Column="9" Grid.Row="1" Text=" 8 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <TextBlock Name="LeftRow7" Grid.Column="0" Grid.Row="2" Text=" 7 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Image Grid.Column="1" Grid.Row="2" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="2" Grid.Row="2" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="3" Grid.Row="2" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="4" Grid.Row="2" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="5" Grid.Row="2" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="6" Grid.Row="2" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="7" Grid.Row="2" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="8" Grid.Row="2" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <TextBlock Name="RightRow7" Grid.Column="9" Grid.Row="2" Text=" 7 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <TextBlock Name="LeftRow6" Grid.Column="0" Grid.Row="3" Text=" 6 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Image Grid.Column="1" Grid.Row="3" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="2" Grid.Row="3" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="3" Grid.Row="3" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="4" Grid.Row="3" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="5" Grid.Row="3" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="6" Grid.Row="3" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="7" Grid.Row="3" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="8" Grid.Row="3" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <TextBlock Name="RightRow6" Grid.Column="9" Grid.Row="3" Text=" 6 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <TextBlock Name="LeftRow5" Grid.Column="0" Grid.Row="4" Text=" 5 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Image Grid.Column="1" Grid.Row="4" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="2" Grid.Row="4" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="3" Grid.Row="4" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="4" Grid.Row="4" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="5" Grid.Row="4" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="6" Grid.Row="4" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="7" Grid.Row="4" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="8" Grid.Row="4" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <TextBlock Name="RightRow5" Grid.Column="9" Grid.Row="4" Text=" 5 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <TextBlock Name="LeftRow4" Grid.Column="0" Grid.Row="5" Text=" 4 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Image Grid.Column="1" Grid.Row="5" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="2" Grid.Row="5" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="3" Grid.Row="5" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="4" Grid.Row="5" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="5" Grid.Row="5" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="6" Grid.Row="5" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="7" Grid.Row="5" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="8" Grid.Row="5" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <TextBlock Name="RightRow4" Grid.Column="9" Grid.Row="5" Text=" 4 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <TextBlock Name="LeftRow3" Grid.Column="0" Grid.Row="6" Text=" 3 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Image Grid.Column="1" Grid.Row="6" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="2" Grid.Row="6" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="3" Grid.Row="6" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="4" Grid.Row="6" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="5" Grid.Row="6" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="6" Grid.Row="6" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="7" Grid.Row="6" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="8" Grid.Row="6" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <TextBlock Name="RightRow3" Grid.Column="9" Grid.Row="6" Text=" 3 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <TextBlock Name="LeftRow2" Grid.Column="0" Grid.Row="7" Text=" 2 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Image Grid.Column="1" Grid.Row="7" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="2" Grid.Row="7" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="3" Grid.Row="7" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="4" Grid.Row="7" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="5" Grid.Row="7" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="6" Grid.Row="7" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="7" Grid.Row="7" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="8" Grid.Row="7" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <TextBlock Name="RightRow2" Grid.Column="9" Grid.Row="7" Text=" 2 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <TextBlock Name="LeftRow1" Grid.Column="0" Grid.Row="8" Text=" 1 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Image Grid.Column="1" Grid.Row="8" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="2" Grid.Row="8" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="3" Grid.Row="8" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="4" Grid.Row="8" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="5" Grid.Row="8" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="6" Grid.Row="8" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <Image Grid.Column="7" Grid.Row="8" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square1.jpg" Stretch="Fill" />
+        <Image Grid.Column="8" Grid.Row="8" Source="/TrevyBurgess.Games.TrevyChess.ChessGameUI;component/Images/ChessPieces/Square2.jpg" Stretch="Fill" />
+        <TextBlock Name="RightRow1" Grid.Column="9" Grid.Row="8" Text=" 1 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <TextBlock Name="BottomCol1" Grid.Column="1" Grid.Row="9" Text=" A " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="BottomCol2" Grid.Column="2" Grid.Row="9" Text=" B " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="BottomCol3" Grid.Column="3" Grid.Row="9" Text=" C " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="BottomCol4" Grid.Column="4" Grid.Row="9" Text=" D " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="BottomCol5" Grid.Column="5" Grid.Row="9" Text=" E " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="BottomCol6" Grid.Column="6" Grid.Row="9" Text=" F " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="BottomCol7" Grid.Column="7" Grid.Row="9" Text=" G " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="BottomCol8" Grid.Column="8" Grid.Row="9" Text=" H " HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </Grid>
+</UserControl>

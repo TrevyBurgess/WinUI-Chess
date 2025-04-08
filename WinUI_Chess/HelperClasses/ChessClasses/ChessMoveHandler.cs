@@ -1,6 +1,7 @@
 ﻿//
 //
-namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
-{
-    public delegate void ChessMoveHandler(HelperClasses.Interfaces.IChessBoardControl chessBoard, ChessMoveEventArgs e);
-}
+namespace CyberFeedForward.WinUI_Chess.HelperClasses.ChessClasses;
+
+using CyberFeedForward.WinUI_Chess.HelperClasses.InterfacesClasses;
+
+public delegate void ChessMoveHandler(IChessBoardControl chessBoard, ChessMoveEventArgs e);

@@ -3,7 +3,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
-    <RootNamespace>WinUI_Chess</RootNamespace>
+    <RootNamespace>CyberFeedForward.WinUI_Chess</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Platforms>x86;x64;ARM64</Platforms>
     <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
@@ -13,10 +13,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Page Remove="Controls_2\ChessBoardControl.xaml" />
-    <Page Remove="Controls_2\ChessPieceControl.xaml" />
-    <Page Remove="Controls_2\HelpPage.xaml" />
-    <Page Remove="Controls_2\PawnPromotionChooser.xaml" />
+    <Page Remove="Controls\ChessBoardControl.xaml" />
+    <Page Remove="Controls\ChessPieceControl.xaml" />
+    <Page Remove="Controls\HelpPage.xaml" />
+    <Page Remove="Controls\PawnPromotionChooser.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +48,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ChessBoardLogic\ChessBoardLogic.csproj" />
     <ProjectReference Include="..\SimpleChessAI\SimpleChessAI.csproj" />
+    <ProjectReference Include="..\ViewModelBase\ViewModelBase.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -63,16 +64,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Update="Controls_2\ChessBoardControl.xaml">
+    <None Update="Controls\ChessBoardControl.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="Controls_2\ChessPieceControl.xaml">
+    <None Update="Controls\ChessPieceControl.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="Controls_2\HelpPage.xaml">
+    <None Update="Controls\HelpPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Update="Controls_2\PawnPromotionChooser.xaml">
+    <None Update="Controls\PawnPromotionChooser.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>

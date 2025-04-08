@@ -1,21 +1,15 @@
 ﻿//
 //
-namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
+namespace CyberFeedForward.ChessBoardLogic.ChessMoveClasses;
+
+using System;
+
+/// <summary>
+/// Illegal chess move
+/// </summary>
+public class IllegalMoveException : InvalidOperationException
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-    using System.Threading.Tasks;
+    public IllegalMoveException() : base() { }
 
-    /// <summary>
-    /// Illegal chess move
-    /// </summary>
-    public class IllegalMoveException : InvalidOperationException
-    {
-        public IllegalMoveException() : base() { }
-
-        public IllegalMoveException(string message) : base(message) { }
-    }
+    public IllegalMoveException(string message) : base(message) { }
 }

@@ -1,10 +1,10 @@
 ﻿// 
 // 
-namespace TrevyBurgess.Games.TrevyChess.ChessGameUI
+namespace CyberFeedForward.WinUI_Chess.HelperClasses.ToolClasses
 {
+    using CyberFeedForward.SimpleChessAI.HelperClasses;
     using Microsoft.UI.Xaml.Data;
     using System;
-    using TrevyBurgess.Games.TrevyChess.ChessGameAI;
 
     public class DifficultyConverter : IValueConverter
     {

@@ -1,40 +1,29 @@
 ﻿//
 //
-namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
+namespace CyberFeedForward.ChessBoardLogic.ChessBoardClasses;
+
+using System.Diagnostics;
+
+/// <summary>
+/// Store position of chess pieces
+/// </summary>
+[method: DebuggerHidden]
+/// <summary>
+/// Store position of chess pieces
+/// </summary>
+public struct ChessPieceLocation(ColPos colLoc, RowPos rowLoc) : System.IEquatable<ChessPieceLocation>
 {
-    using System.Diagnostics;
+    public ColPos ColLoc = colLoc;
+    public RowPos RowLoc = rowLoc;
 
-    /// <summary>
-    /// Store position of chess pieces
-    /// </summary>
-    public struct ChessPieceLocation : System.IEquatable<ChessPieceLocation>
+    [DebuggerHidden]
+    public readonly bool Equals(ChessPieceLocation other)
     {
-        public ColPos ColLoc;
-        public RowPos RowLoc;
+        return other.ColLoc == ColLoc && other.RowLoc == RowLoc;
+    }
 
-        [DebuggerHidden]
-        public ChessPieceLocation(ColPos colLoc, RowPos rowLoc)
-        {
-            this.ColLoc = colLoc;
-            this.RowLoc = rowLoc;
-        }
-
-        [DebuggerHidden]
-        public bool Equals(ChessPieceLocation other)
-        {
-            if (other.ColLoc == this.ColLoc && other.RowLoc == this.RowLoc)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public override string ToString()
-        {
-            return ColLoc.ToString() + ((int)RowLoc).ToString();
-        }
+    public override readonly string ToString()
+    {
+        return ColLoc.ToString() + ((int)RowLoc).ToString();
     }
 }

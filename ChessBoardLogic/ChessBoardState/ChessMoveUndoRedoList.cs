@@ -1,140 +1,142 @@
 ﻿//
 //
-namespace TrevyBurgess.Games.TrevyChess.ChessBoardLogic
+namespace CyberFeedForward.ChessBoardLogic.ChessBoardState;
+
+using CyberFeedForward.ChessBoardLogic.ChessBoardClasses;
+using CyberFeedForward.ChessBoardLogic.ChessMoveClasses;
+using CyberFeedForward.ChessBoardLogic.HelperClasses;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Contracts;
+
+/// <summary>
+/// Manage chess board UndoRedo list.
+/// </summary>
+internal class ChessMoveUndoRedoList
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics.Contracts;
+    private readonly LinkedList<string> undoList;
 
     /// <summary>
-    /// Manage chess board UndoRedo list.
+    /// Current chess move
     /// </summary>
-    internal class ChessMoveUndoRedoList
+    private LinkedListNode<string> currentMove;
+
+    /// <summary>
+    /// Keep track of how many moves passed since game started
+    /// </summary>
+    internal int MoveCount { get; set; }
+
+    /// <summary>
+    /// Create undo list, starting with first move
+    /// </summary>
+    internal ChessMoveUndoRedoList(string move)
     {
-        private LinkedList<string> undoList;
+        undoList = new LinkedList<string>();
+        currentMove = new LinkedListNode<string>(move);
+        undoList.AddLast(currentMove);
+        MoveCount = 1;
+    }
 
-        /// <summary>
-        /// Current chess move
-        /// </summary>
-        private LinkedListNode<string> currentMove;
+    internal ColPos GetEnPassantColumn()
+    {
+        Contract.Assume(currentMove.Value.Length > 1);
 
-        /// <summary>
-        /// Keep track of how many moves passed since game started
-        /// </summary>
-        internal int MoveCount { get; set; }
+        string boardState = currentMove.Value;
 
-        /// <summary>
-        /// Create undo list, starting with first move
-        /// </summary>
-        internal ChessMoveUndoRedoList(string move)
+        return Library.ParseColPos(boardState[boardState.Length - 2]);
+    }
+
+    /// <summary>
+    /// Add move to list of moves
+    /// </summary>
+    internal void AddMoveToUndoList(string boardLayout, bool computerMove)
+    {
+        Contract.Requires<ArgumentException>(boardLayout.Length == ChessBoard.C_BoardStateStringLength);
+
+        if (undoList.Count > MoveCount)
         {
-            undoList = new LinkedList<string>();
-            currentMove = new LinkedListNode<string>(move);
-            undoList.AddLast(currentMove);
-            MoveCount = 1;
-        }
-
-        internal ColPos GetEnPassantColumn()
-        {
-            Contract.Assume(currentMove.Value.Length > 1);
-
-            string boardState = currentMove.Value;
-
-            return Library.ParseColPos(boardState[boardState.Length - 2]);
-        }
-
-        /// <summary>
-        /// Add move to list of moves
-        /// </summary>
-        internal void AddMoveToUndoList(string boardLayout, bool computerMove)
-        {
-            Contract.Requires<ArgumentException>(boardLayout.Length == ChessBoard.C_BoardStateStringLength);
-
-            if (undoList.Count > MoveCount)
+            // Discard moves, since they are being replaced
+            while (undoList.Count > MoveCount)
             {
-                // Discard moves, since they are being replaced
-                while (undoList.Count > MoveCount)
-                {
-                    undoList.RemoveLast();
-                }
+                undoList.RemoveLast();
             }
-
-            // Add new move
-            if (computerMove)
-            {
-                boardLayout = boardLayout.Substring(0, boardLayout.Length - 1) + "C";
-            }
-
-            currentMove = new LinkedListNode<string>(boardLayout);
-
-            undoList.AddLast(currentMove);
-            MoveCount++;
         }
 
-        /// <summary>
-        /// Return true if previous state exists
-        /// </summary>
-        internal bool CanGetPreviousState()
+        // Add new move
+        if (computerMove)
         {
-            if (currentMove.Previous == null)
-                return false;
-            else return true;
+            boardLayout = boardLayout.Substring(0, boardLayout.Length - 1) + "C";
         }
 
-        /// <summary>
-        /// Return true if next state exists
-        /// </summary>
-        internal bool CanGetNextState()
-        {
-            if (currentMove.Next == null)
-                return false;
-            else return true;
-        }
+        currentMove = new LinkedListNode<string>(boardLayout);
 
-        /// <summary>
-        /// Gets the previous board state
-        /// </summary>
-        /// <returns>Previous state of board</returns>
-        internal string GetPreviousMove()
+        undoList.AddLast(currentMove);
+        MoveCount++;
+    }
+
+    /// <summary>
+    /// Return true if previous state exists
+    /// </summary>
+    internal bool CanGetPreviousState()
+    {
+        if (currentMove.Previous == null)
+            return false;
+        else return true;
+    }
+
+    /// <summary>
+    /// Return true if next state exists
+    /// </summary>
+    internal bool CanGetNextState()
+    {
+        if (currentMove.Next == null)
+            return false;
+        else return true;
+    }
+
+    /// <summary>
+    /// Gets the previous board state
+    /// </summary>
+    /// <returns>Previous state of board</returns>
+    internal string GetPreviousMove()
+    {
+        if (currentMove.Previous == null)
         {
-            if (currentMove.Previous == null)
+            throw new IllegalMoveException("Can't Undo Move");
+        }
+        else
+        {
+            MoveCount--;
+            string moveString = currentMove.Value;
+            currentMove = currentMove.Previous;
+
+            if (moveString.Substring(moveString.Length - 1) == "C")
             {
-                throw new IllegalMoveException("Can't Undo Move");
-            }
-            else
-            {
-                MoveCount--;
-                string moveString = currentMove.Value;
                 currentMove = currentMove.Previous;
-
-                if (moveString.Substring(moveString.Length - 1) == "C")
-                {
-                    currentMove = currentMove.Previous;
-                    undoList.RemoveLast();
-                    MoveCount --;
-                }
-
-                return currentMove.Value;
+                undoList.RemoveLast();
+                MoveCount --;
             }
+
+            return currentMove.Value;
         }
+    }
 
-        /// <summary>
-        /// Gets the next board state
-        /// </summary>
-        /// <returns>Next state of board</returns>
-        internal string GetNextMove()
+    /// <summary>
+    /// Gets the next board state
+    /// </summary>
+    /// <returns>Next state of board</returns>
+    internal string GetNextMove()
+    {
+        if (currentMove.Next == null)
         {
-            if (currentMove.Next == null)
-            {
-                throw new IllegalMoveException("Can't Undo Move");
-            }
-            else
-            {
-                currentMove = currentMove.Next;
-                MoveCount++;
+            throw new IllegalMoveException("Can't Undo Move");
+        }
+        else
+        {
+            currentMove = currentMove.Next;
+            MoveCount++;
 
-                return currentMove.Value;
-            }
+            return currentMove.Value;
         }
     }
 }
