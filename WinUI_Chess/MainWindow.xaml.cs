@@ -25,12 +25,19 @@ namespace WinUI_Chess
     {
         public MainWindow()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+
+            ExtendsContentIntoTitleBar = true;
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private void MainWindow1_Activated(object sender, WindowActivatedEventArgs args)
         {
-            myButton.Content = "Clicked";
+            
+        }
+
+        private void MainWindow1_SizeChanged(object sender, WindowSizeChangedEventArgs args)
+        {
+            args.Handled = true;
         }
     }
 }

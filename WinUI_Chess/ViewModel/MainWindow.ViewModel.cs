@@ -15,7 +15,7 @@ using System;
 /// </summary>
 public partial class MainWindowViewModel : ViewModelBase
 {
-    private IChessBoardControl chessBoardControl;
+    private readonly IChessBoardControl chessBoardControl;
 
     public MainWindowViewModel(IChessBoardControl chessBoardControl)
     {
@@ -92,7 +92,7 @@ public partial class MainWindowViewModel : ViewModelBase
                 _ExitGameCommand = new RelayCommand(
                     () =>
                     {
-                        Application.Current.Shutdown();
+                        Application.Current.Exit();
                     }
                 );
             }

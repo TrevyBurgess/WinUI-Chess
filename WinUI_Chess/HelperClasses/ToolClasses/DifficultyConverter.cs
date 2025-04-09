@@ -6,7 +6,7 @@ namespace CyberFeedForward.WinUI_Chess.HelperClasses.ToolClasses
     using Microsoft.UI.Xaml.Data;
     using System;
 
-    public class DifficultyConverter : IValueConverter
+    public partial class DifficultyConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
@@ -29,7 +29,6 @@ namespace CyberFeedForward.WinUI_Chess.HelperClasses.ToolClasses
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
-            int challengeLevel = (int)value;
             switch ((int)value)
             {
                 case 0:

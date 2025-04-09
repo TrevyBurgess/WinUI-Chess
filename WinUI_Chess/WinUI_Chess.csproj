@@ -13,10 +13,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Page Remove="Controls\ChessBoardControl.xaml" />
-    <Page Remove="Controls\ChessPieceControl.xaml" />
-    <Page Remove="Controls\HelpPage.xaml" />
-    <Page Remove="Controls\PawnPromotionChooser.xaml" />
+    <Compile Remove="HelperClasses\Apex\**" />
+    <Compile Remove="HelperClasses\ExternalClasses\**" />
+    <Compile Remove="ViewModel\**" />
+    <EmbeddedResource Remove="HelperClasses\Apex\**" />
+    <EmbeddedResource Remove="HelperClasses\ExternalClasses\**" />
+    <EmbeddedResource Remove="ViewModel\**" />
+    <None Remove="HelperClasses\Apex\**" />
+    <None Remove="HelperClasses\ExternalClasses\**" />
+    <None Remove="ViewModel\**" />
+    <Page Remove="HelperClasses\Apex\**" />
+    <Page Remove="HelperClasses\ExternalClasses\**" />
+    <Page Remove="ViewModel\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,18 +72,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Update="Controls\ChessBoardControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="Controls\ChessPieceControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="Controls\HelpPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="Controls\PawnPromotionChooser.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
+    <Folder Include="Styles\" />
   </ItemGroup>
 
   <!--
@@ -93,5 +90,23 @@
     <PublishReadyToRun Condition="'$(Configuration)' != 'Debug'">True</PublishReadyToRun>
     <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
     <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
+    <ApplicationIcon>Assets\Images\TrevyChess.ico</ApplicationIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <PRIResource Remove="HelperClasses\Apex\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Remove="HelperClasses\ExternalClasses\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Remove="ViewModel\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controls\ChessBoardUi.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\ChessBoardUi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
 </Project>
