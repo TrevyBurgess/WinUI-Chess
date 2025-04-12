@@ -1,43 +1,58 @@
-﻿using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-
-// To learn more about WinUI, the WinUI project structure,
+﻿// To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
+namespace WinUI_Chess;
 
-namespace WinUI_Chess
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+
+/// <summary>
+/// An empty window that can be used on its own or navigated to within a Frame.
+/// </summary>
+public sealed partial class MainWindow : Window
 {
-    /// <summary>
-    /// An empty window that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class MainWindow : Window
+    public double InfoBadgeOpacity { get; set; }
+
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
+        InitializeComponent();
 
-            ExtendsContentIntoTitleBar = true;
-        }
+        MenuFileNew.Text = "New";
+        MenuFileNew.Icon = new SymbolIcon(Symbol.NewFolder);
+        MenuFilePrint.Text = "Print";
+        MenuFilePrint.Icon = new SymbolIcon(Symbol.Print);
+        MenuFileExit.Text = "Exit";
+        MenuFileExit.Icon = new SymbolIcon(Symbol.Emoji);
 
-        private void MainWindow1_Activated(object sender, WindowActivatedEventArgs args)
-        {
-            
-        }
+        MenuViewToolbar.Text = "Show toolbar";
+        MenuViewToolbar.Icon = new SymbolIcon(Symbol.ShowResults);
+        MenuViewStatusBar.Text = "Show status bar";
+        MenuViewStatusBar.Icon = new SymbolIcon(Symbol.View);
+        MenuViewRotate.Text = "Rotate board";
+        MenuViewRotate.Icon = new SymbolIcon(Symbol.Rotate);
 
-        private void MainWindow1_SizeChanged(object sender, WindowSizeChangedEventArgs args)
-        {
-            args.Handled = true;
-        }
+        MenuChessPlayAgainstComputer.Text = "Play against computer";
+        MenuChessPlayAgainstComputer.Icon = new SymbolIcon(Symbol.Play);
+
+        MenuToolsShowChessCodes.Text = "Show chess codes";
+        MenuToolsShowChessCodes.Icon = new SymbolIcon(Symbol.Copy);
+
+        MenuHelpTopics.Text = "Help topics";
+        MenuHelpTopics.Icon = new SymbolIcon(Symbol.Help);
+        MenuHelpAbout.Text = "About";
+        MenuHelpAbout.Icon = new SymbolIcon(Symbol.Help);
+
+        //ExtendsContentIntoTitleBar = true;
+
+        // InfoBadgeOpacity = 0.5;
+    }
+
+    private void MainWindow1_Activated(object sender, WindowActivatedEventArgs args)
+    {
+
+    }
+
+    private void MainWindow1_SizeChanged(object sender, WindowSizeChangedEventArgs args)
+    {
+        args.Handled = true;
     }
 }

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE SillyMessages [
+  <!ELEMENT SillyMessages ANY>
+  <!ELEMENT Group ANY>
+  <!ELEMENT Message ANY>
+  <!ATTLIST Group id ID #REQUIRED >
+]>
+<SillyMessages>
+  <Group id="ComputerInCheck">
+    <Message>Damn you, Damn you all</Message>
+    <Message>Check is not mate, so there</Message>
+    <Message>I'm not afraid. You don't scare me</Message>
+    <Message>Be afraid. Be very afraid</Message>
+    <Message>I think someone is cheating</Message>
+  </Group>
+
+  <Group id="ComputerCheckMated">
+    <Message>I challenge you to a rematch. Next time I will win. Wa-ha-ha.</Message>
+    <Message>Baaaaa - I want my mummy.</Message>
+    <Message>This is reverse day. That means I won, not you :-)</Message>
+    <Message>Damn you. Damn you all!!! - Another game?</Message>
+    <Message>Next time you are toast.</Message>
+    <Message>You only won because I gave you a handicapp</Message>
+    <Message>You may have won now, but I'll be back</Message>
+    <Message>You are so mean to me?</Message>
+    <Message>Nobody knows the trouble I've seen. Nobody knows but Jesus.</Message>
+    <Message>Just because you beat me doesn't make you a Kasparov. So there :-|</Message>
+  </Group>
+
+  <Group id="ComputerLossesQueen">
+    <Message>My poor queen. What has that mean man done to you?</Message>
+    <Message>Why are you so mean to me?</Message>
+    <Message>Oh Man!</Message>
+    <Message>You only got my queen because I was distracted.</Message>
+    <Message>How did that happen?</Message>
+    <Message>So you got my queen. I did not need it anyway.</Message>
+  </Group>
+
+  <Group id="ComputerLossesRook">
+    <Message>How did you get my Rook? I didn't see that coming.</Message>
+    <Message>Damn you, Damn you all</Message>
+    <Message>You only got my rook because I was distracted.</Message>
+    <Message>This just isn't my day</Message>
+    <Message>Can I take back that move</Message>
+    <Message>How did that happen?</Message>
+    <Message>Oh Man!</Message>
+    <Message>How did that happen?</Message>
+    <Message>EVIL!!!</Message>
+  </Group>
+
+  <Group id="ComputerLossesBishop">
+    <Message>I may have lost my bishop but I still have a prayer, don't I?</Message>
+    <Message>How did that happen?</Message>
+    <Message>Oh Man!</Message>
+    <Message>I close my eyes for one minute and I lose a bishop</Message>
+    <Message>You only got my bishop because I was distracted.</Message>
+    <Message>Damn you, Damn you all</Message>
+  </Group>
+
+  <Group id="ComputerLossesKnight">
+    <Message>A knight, A knight, my kingdom for another knight</Message>
+    <Message>How did that happen?</Message>
+    <Message>Oh Man!</Message>
+    <Message>I hope you know that I am letting you win</Message>
+    <Message>Damn you, Damn you all</Message>
+  </Group>
+
+  <Group id="ComputerLossesPawn">
+    <Message>You win some, you lose some</Message>
+    <Message>Oh Man!</Message>
+    <Message>I had high hopes for that pawn. Oh well.</Message>
+    <Message>I was hoping to make that into a queen</Message>
+    <Message>Damn you, Damn you all</Message>
+  </Group>
+
+  <Group id="ComputerLossesPawnEnPassant">
+    <Message>Is that allowed?</Message>
+    <Message>Can I take that move back?</Message>
+  </Group>
+
+  <Group id="UserInCheck">
+    <Message>I got you now.</Message>
+    <Message>I'm winning. I'm winning</Message>
+    <Message>Would you like a draw? Forget about it.</Message>
+  </Group>
+
+  <Group id="UserCheckMated">
+    <Message>I won. I can't believe it. It's a, dream come true :)</Message>
+    <Message>I won. My big brother Deep Junior will be proud of me.</Message>
+  </Group>
+
+  <Group id="UserLossesQueen">
+    <Message>I got your Queen. Ah-Huh!</Message>
+    <Message>I'm so evil, taking your queen like that.</Message>
+    <Message>Sorry. No take backs.</Message>
+  </Group>
+
+  <Group id="UserLossesRook">
+    <Message>I got your Rook. Ah-Huh!</Message>
+    <Message>You want your rook back? I don't think so.</Message>
+  </Group>
+
+  <Group id="UserLossesBishop">
+    <Message>I got your Bishop. Ah-Huh!</Message>
+    <Message>Who's the comp? Oh yea. Oh yea.</Message>
+  </Group>
+
+  <Group id="UserLossesKnight">
+    <Message>I got your Knight. Ah-Huh!</Message>
+    <Message>That's one less knight for you.</Message>
+  </Group>
+
+  <Group id="UserLossesPawn">
+    <Message>I got your Pawn. Ah-Huh!</Message>
+    <Message>That's one less pawn to be promoted to queen.</Message>
+  </Group>
+
+  <Group id="UserLossesPawnEnPassant">
+    <Message>That was cool, wasn't it?</Message>
+    <Message>Man, I'm good :-)</Message>
+  </Group>
+
+  <Group id="Draw">
+    <Message>I gave you a draw because I was feeling sorry for you ;-)</Message>
+    <Message>It's a draw.</Message>
+    <Message>Yes! A draw :)  - It almost as good as a win.</Message>
+  </Group>
+
+  <Group id="Stalemate">
+    <Message>Stalemates are good, aren't they?</Message>
+    <Message>I dot a stalemate. I got a stalemate.</Message>
+    <Message>Stalemate. How did that happen?</Message>
+  </Group>
+
+</SillyMessages>

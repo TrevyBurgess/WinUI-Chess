@@ -21,7 +21,7 @@ public class ChessAI
         Contract.Requires<ArgumentNullException>(board != null);
         Contract.Requires<ArgumentException>(difficulty > 0, "Difficulty level must be 1 or greater.");
 
-        ChessBoard testBoard = new ChessBoard(board);
+        var testBoard = new ChessBoard(board);
 
         var bestChessMove = await SuggestMove(testBoard, difficulty, 2, null);
 
@@ -30,7 +30,7 @@ public class ChessAI
 
     private static async Task<WeightedChessMove> SuggestMove(ChessBoard board, int difficulty, int minResults, WeightedChessMove previousMove)
     {
-        List<WeightedChessMove> results = await CreateMoveList(board, difficulty, minResults, previousMove);
+        var results = await CreateMoveList(board, difficulty, minResults, previousMove);
         if (results.Count == 0)
         {
             throw new NotSupportedException("No results found.");
@@ -62,7 +62,7 @@ public class ChessAI
                 (left, right) => right.PositionGain - left.PositionGain);
 
             // all moves have equal merit. Select one at random.
-            Random r = new Random(DateTime.Now.Millisecond);
+            var r = new Random(DateTime.Now.Millisecond);
             return results[r.Next(results.Count - 1)];
         }
     }
@@ -75,7 +75,7 @@ public class ChessAI
         difficulty--;
 
         // Make list of all possible moves.
-        List<WeightedChessMove> moves = MoveWeightCalculations.WeightedMoveList(board, previousMove);
+        var moves = MoveWeightCalculations.WeightedMoveList(board, previousMove);
 
         if (moves.Count == 0)
         {
@@ -90,7 +90,7 @@ public class ChessAI
         else
         {
             // Create list of all moves that puts opponent king in check
-            List<WeightedChessMove> checkMoves = new List<WeightedChessMove>();
+            var checkMoves = new List<WeightedChessMove>();
             foreach (WeightedChessMove move in moves)
             {
                 // We will accept a draw
@@ -113,7 +113,7 @@ public class ChessAI
             }
             else
             {
-                List<WeightedChessMove> opponentBestMoves = await GetOpponentBestMoves(board, difficulty, minResults, moves);
+                var opponentBestMoves = await GetOpponentBestMoves(board, difficulty, minResults, moves);
                 if (opponentBestMoves.Count == 0 || previousMove == null)
                 {
                     // Any move will win
@@ -121,12 +121,12 @@ public class ChessAI
                 }
                 else
                 {
-                    List<WeightedChessMove> bestMoves = new List<WeightedChessMove>();
+                    var bestMoves = new List<WeightedChessMove>();
                     foreach (WeightedChessMove opponentMove in opponentBestMoves)
                     {
                         if (opponentMove.EndGameStatus == EndGameState.GameHasNotEnded)
                         {
-                            WeightedChessMove testMove = opponentMove.OriginalChessMove;
+                            var testMove = opponentMove.OriginalChessMove;
                             //testMove.OpponentGain = opponentMove.MoveGain;
                             testMove.MoveGain -= opponentMove.MoveGain;
 
@@ -172,13 +172,13 @@ public class ChessAI
         #endregion
 
         // For each move we make, find best move opponent makes
-        List<Task<WeightedChessMove>> opponentMoveTasks = new List<Task<WeightedChessMove>>();
+        var opponentMoveTasks = new List<Task<WeightedChessMove>>();
         foreach (WeightedChessMove move in moves)
         {
             // Create copy of board
-            ChessBoard testBoard = new ChessBoard(board);
+            var testBoard = new ChessBoard(board);
 
-            ChessMoveResults moveRsults = testBoard.Move(move.CurrentMove, true);
+            var moveRsults = testBoard.Move(move.CurrentMove, true);
             if (moveRsults.PawnPromoted)
             {
                 // Check for promoting to queen
@@ -208,10 +208,10 @@ public class ChessAI
         }
 
         // Get opponent moves
-        List<WeightedChessMove> opponentMoves = new List<WeightedChessMove>();
+        var opponentMoves = new List<WeightedChessMove>();
         foreach (Task<WeightedChessMove> opponentMoveTask in opponentMoveTasks)
         {
-            WeightedChessMove opponentMove = await opponentMoveTask;
+            var opponentMove = await opponentMoveTask;
 
             opponentMoves.Add(opponentMove.OriginalChessMove);
         }

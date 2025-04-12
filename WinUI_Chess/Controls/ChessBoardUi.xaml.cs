@@ -28,7 +28,7 @@ public sealed partial class ChessBoardUi : UserControl
     /// <summary>
     /// Event for when chess piece successfully moved
     /// </summary>
-    public event ChessMoveHandler ChessPieceMoved;
+    public event ChessMoveHandler ChessPieceMoved = delegate { };
 
     private void TheChessBoard_Loaded(object sender, RoutedEventArgs e)
     {

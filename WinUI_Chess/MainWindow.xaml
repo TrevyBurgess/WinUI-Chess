@@ -10,21 +10,81 @@
     x:Name="MainWindow1"
     Activated="MainWindow1_Activated"
     Title="{Binding TrevyChessTitle}"
-    SizeChanged="MainWindow1_SizeChanged"
-    
+    SizeChanged="MainWindow1_SizeChanged"    
     mc:Ignorable="d"
     >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <MenuBar>
+            <MenuBarItem x:Name="MenuFile" >
+                <MenuFlyoutItem x:Name="MenuFileNew" />
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem x:Name="MenuFilePrint" />
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem x:Name="MenuFileExit"/>
+            </MenuBarItem>
 
+            <MenuBarItem x:Name="MenuView" Title="View">
+                <MenuFlyoutItem x:Name="MenuViewToolbar" Text="View Toolbar"/>
+                <MenuFlyoutItem x:Name="MenuViewStatusBar" Text="View Status Bar"/>
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem x:Name="MenuViewRotate" Text="Rotate Board"/>
+            </MenuBarItem>
+
+            <MenuBarItem x:Name="MenuChess" Title="Chess">
+                <MenuFlyoutItem x:Name="MenuChessPlayAgainstComputer" Text="PlayAgainstComputer"/>
+            </MenuBarItem>
+
+            <MenuBarItem x:Name="MenuTools" Title="Tools">
+                <MenuFlyoutItem x:Name="MenuToolsShowChessCodes" Text="Show chess codes"/>
+            </MenuBarItem>
+
+            <MenuBarItem x:Name="MenuHelp" Title="Help">
+                <MenuFlyoutItem x:Name="MenuHelpTopics" Text="Help Topics"/>
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem x:Name="MenuHelpAbout" Text="About"/>
+            </MenuBarItem>
+        </MenuBar>
+
+
+
+
+        <!--<NavigationView x:Name="NavPanel" IsPaneOpen="False" Background="AliceBlue" Grid.RowSpan="2">
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Name="InboxPage" Content="Inbox" Icon="Mail" AutomationProperties.Name="Inbox, 5 notifications">
+                    <NavigationViewItem.InfoBadge>
+                        <InfoBadge x:Name="infoBadge1" Value="5" />
+                    </NavigationViewItem.InfoBadge>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+        </NavigationView>-->
 
         <ChessControls:ChessBoardUi
+                Grid.Row="1"
             x:Name="ChessBoard"
             HorizontalAlignment="Center"
             VerticalAlignment="Center" />
 
 
-
-
-    </StackPanel>
+        <!--<NavigationView>
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content = "Game Settings">
+                    <NavigationViewItem.Icon>
+                        <AnimatedIcon x:Name='AnimatedIcon'>
+                            <AnimatedIcon.Source>
+                                <animatedvisuals:AnimatedSettingsVisualSource/>
+                            </AnimatedIcon.Source>
+                            <AnimatedIcon.FallbackIconSource>
+                                <FontIconSource Glyph="&#xE713;"/>
+                            </AnimatedIcon.FallbackIconSource>
+                        </AnimatedIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+        </NavigationView>-->
+    </Grid>
 </Window>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE SillyMessages [
+  <!ELEMENT SillyMessages ANY>
+  <!ELEMENT Group ANY>
+  <!ELEMENT Message ANY>
+  <!ATTLIST Group id ID #REQUIRED >
+]>
+<SillyMessages>
+  <Group id="ComputerInCheck">
+    <Message>Maudit sois-tu, rien vous tous</Message>
+    <Message>Vérifiez n'est pas mate, donc il</Message>
+    <Message>Je n'ai pas peur. Vous ne me fait pas peur</Message>
+    <Message>Avoir peur. Soyez très peur</Message>
+    <Message>Je pense que quelqu'un triche</Message>
+  </Group>
+
+  <Group id="ComputerCheckMated">
+    <Message>Je vous défie à un combat revanche. La prochaine fois que je vais gagner. Wa-ha-ha.</Message>
+    <Message>Baaaaa - Je veux ma maman.</Message>
+    <Message>C'est le jour inverse. Cela signifie que j'ai gagné, n'est-ce pas :-)</Message>
+    <Message>Maudit sois-tu. Putain vous tous! - Un autre jeu?</Message>
+    <Message>La prochaine fois que vous êtes grillé.</Message>
+    <Message>Tu n'as gagné parce que je vous ai donné un handicap</Message>
+    <Message>Vous avez peut être gagné, mais je serai de retour</Message>
+    <Message>Vous êtes si méchant signifie</Message>
+    <Message>Personne ne sait la peine que j'ai vu. Personne ne le sait, mais Jésus.</Message>
+    <Message>Tout simplement parce que vous me battre ne vous rend pas un Kasparov. Il ya donc :-|</Message>
+  </Group>
+
+  <Group id="ComputerLossesQueen">
+    <Message>Mon pauvre reine. Qu'est-ce que l'homme a moyenne fait pour vous?</Message>
+    <Message>Pourquoi êtes-vous si méchant avec moi?</Message>
+    <Message>mon Dieu!</Message>
+    <Message>Vous n'avez que ma reine, car j'ai été distrait.</Message>
+    <Message>Comment est-ce arrivé?</Message>
+    <Message>Donc tu as ma reine. Je n'ai pas besoin de toute façon.</Message>
+  </Group>
+
+  <Group id="ComputerLossesRook">
+    <Message>Comment avez-vous eu mon Rook? Je n'ai pas vu venir.</Message>
+    <Message>Maudit sois-tu, rien vous tous</Message>
+    <Message>Vous n'avez que mon tour parce que j'ai été distrait.</Message>
+    <Message>Ce n'est tout simplement pas ma journée</Message>
+    <Message>Puis-je reprendre ce mouvement</Message>
+    <Message>Comment est-ce arrivé?</Message>
+    <Message>mon Dieu!</Message>
+    <Message>Comment est-ce arrivé?</Message>
+    <Message>Fléau!!!</Message>
+  </Group>
+
+  <Group id="ComputerLossesBishop">
+    <Message>J'ai peut-être perdu mon évêque, mais j'ai encore une prière, ce que je ne?</Message>
+    <Message>Comment est-ce arrivé?</Message>
+    <Message>mon Dieu!</Message>
+    <Message>Je ferme les yeux pendant une minute et je perds un évêque</Message>
+    <Message>Vous n'avez que mon évêque parce que j'ai été distrait.</Message>
+    <Message>Maudit sois-tu, rien vous tous</Message>
+  </Group>
+
+  <Group id="ComputerLossesKnight">
+    <Message>Un chevalier, un chevalier, mon royaume pour un autre chevalier</Message>
+    <Message>Comment est-ce arrivé?</Message>
+    <Message>mon Dieu!</Message>
+    <Message>J'espère que tu sais que je te laisse gagner</Message>
+    <Message>Maudit sois-tu, rien vous tous</Message>
+  </Group>
+
+  <Group id="ComputerLossesPawn">
+    <Message>Vous en gagnez, vous perdez une partie</Message>
+    <Message>mon Dieu!</Message>
+    <Message>J'avais de grands espoirs pour ce pion. Oh bien.</Message>
+    <Message>J'espérais faire cela en une reine</Message>
+    <Message>Maudit sois-tu, rien vous tous</Message>
+  </Group>
+
+  <Group id="ComputerLossesPawnEnPassant">
+    <Message>Est-ce autorisé?</Message>
+    <Message>Puis-je prendre ce mouvement de retour?</Message>
+  </Group>
+
+  <Group id="UserInCheck">
+    <Message>Je vous tiens maintenant.</Message>
+    <Message>Je gagne. Je gagne</Message>
+    <Message>Voulez-vous un tirage au sort? Forget about it.</Message>
+  </Group>
+
+  <Group id="UserCheckMated">
+    <Message>J'ai gagné. Je ne peux pas y croire. C'est un rêve, devenu réalité :)</Message>
+    <Message>J'ai gagné. Mon grand frère junior profonde sera fier de moi.</Message>
+  </Group>
+
+  <Group id="UserLossesQueen">
+    <Message>Je suis votre Reine. Ah-Huh!</Message>
+    <Message>Je suis si mal, en prenant votre reine comme ça.</Message>
+    <Message>Désolé. Aucune prendre le dos.</Message>
+  </Group>
+
+  <Group id="UserLossesRook">
+    <Message>J'ai reçu votre Tour. Ah-Huh!</Message>
+    <Message>Vous voulez que votre tour en arrière? Je ne crois pas.</Message>
+  </Group>
+
+  <Group id="UserLossesBishop">
+    <Message>Je suis votre évêque. Ah-Huh!</Message>
+    <Message>Qui est le comp? Oh oui. Oh oui.</Message>
+  </Group>
+
+  <Group id="UserLossesKnight">
+    <Message>Je suis votre chevalier. Ah-Huh!</Message>
+    <Message>C'est un chevalier moins pour vous.</Message>
+  </Group>
+
+  <Group id="UserLossesPawn">
+    <Message>J'ai reçu votre Pion. Ah-Huh!</Message>
+    <Message>C'est un pion de moins pour être promu reine.</Message>
+  </Group>
+
+  <Group id="UserLossesPawnEnPassant">
+    <Message>C'était cool, n'est-ce pas?</Message>
+    <Message>Man, je suis bon :-)</Message>
+  </Group>
+
+  <Group id="Draw">
+    <Message>Je vous ai donné un match nul parce que je me sentais désolé pour vous ;-)</Message>
+    <Message>C'est un tirage.</Message>
+    <Message>Oui! Un tirage au sort :) - C'est presque aussi bon que d'une victoire.</Message>
+  </Group>
+
+  <Group id="Stalemate">
+    <Message>Impasses sont bons, ils ne sont pas?</Message>
+    <Message>Je parsèment une impasse. Je suis dans une impasse.</Message>
+    <Message>Impasse. Comment est-ce arrivé?</Message>
+  </Group>
+
+</SillyMessages>
